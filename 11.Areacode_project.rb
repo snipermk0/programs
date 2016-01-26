@@ -35,7 +35,7 @@ loop do                  # infinite loop
   end
   displayCity(dial_book) # displays all the city names
   puts "Enter the name of the city you want the areacode for: "
-  prompt = gets.chomp
+  prompt = gets.chomp.capitalize
   if dial_book.include?(prompt)    # checking to see if a valid selection is entered
     puts "Valid selection, the area code for #{prompt} is #{codeFinder(prompt, dial_book)}"
   else
